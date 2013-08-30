@@ -37,7 +37,15 @@ sudo apt-get -y install git-core gnupg flex bison gperf build-essential zip curl
 echo ""
 echo ""
 echo "Done"
+echo "**************************************************************************"
+echo "*                      Getting Cyanogenmod Sources                       *"
+echo "**************************************************************************"
+echo ""
+echo ""
 mkdir -p ~/CM10/
 cd ~/CM10
 repo init -u git://github.com/CyanogenMod/android.git -b cm-10
 repo sync -j4
+echo ""
+echo ""
+echo "Done"
