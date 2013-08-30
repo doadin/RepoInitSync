@@ -1,18 +1,3 @@
-#!/bin/bash
-# Setting up Android Build Enviroment
-
-echo "**************************************************************************"
-echo "*   This is a simple script that will setup an Android build environment *"
-echo "*   What this script will do is:                                         *"
-echo "*      -Install oracle java6 & purge openjdk                             *"
-echo "*      -Setup adb and fastboot                                           *"
-echo "*      -install packages needed to build                                 *"
-echo "*      -sync Android source                                              *"
-echo "*   this has only been tested on Ubuntu 13.04                            *"
-echo "**************************************************************************"
-read -p "press [Enter] to setup Android build environment..."
-echo ""
-echo ""
 echo "**************************************************************************"
 echo "*                 Replacing openjdk with Oracle java6                    *"
 echo "**************************************************************************"
@@ -52,17 +37,7 @@ sudo apt-get -y install git-core gnupg flex bison gperf build-essential zip curl
 echo ""
 echo ""
 echo "Done"
-echo ""
-echo "**************************************************************************"
-echo "*           Here are the different Sources you can choose from:          *"
-echo "*                                                                        *"               
-echo "*        1) Cyanogenmod 10.1                                             *"
-echo "*                                                                        *"
-echo "**************************************************************************"
-read -p "choose what source you want to sync:"
-[ "$REPLY" == "1" ] && ./cyanogenmod.sh
-
-
-
-
-
+mkdir -p ~/CM10/
+cd ~/CM10
+repo init -u git://github.com/CyanogenMod/android.git -b cm-10
+repo sync -j4
