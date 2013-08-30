@@ -42,9 +42,9 @@ echo "*                      Getting Cyanogenmod Sources                       *
 echo "**************************************************************************"
 echo ""
 echo ""
-mkdir -p ~/CM10/
-cd ~/CM10
-repo init -u git://github.com/CyanogenMod/android.git -b cm-10
+mkdir -p ~/CM10.1/
+cd ~/CM10.1
+repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
 repo sync -j4
 echo ""
 echo ""
