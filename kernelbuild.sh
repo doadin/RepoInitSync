@@ -13,7 +13,7 @@ make "clean"
 # Make defconfig
 echo ""
 echo "------------------------------"
-make "skull_defconfig"
+make "ancora_tmo_oc_vhm_defconfig"
 
 # Build kernel
 
@@ -34,5 +34,11 @@ cd ..
 mkbootimg --kernel zImage --ramdisk newramdisk.cpio.gz --base 0x00400000 --pagesize 4096 --cmdline 'no_console_suspend=1 console=null' -o boot.img
 
 cp boot.img ../test/boot.img
+
+\rm -rf ~/Desktop/Kernel/current
+
+mkdir -p ~/Desktop/Kernel/current/system/lib/modules
+cp -r $MODULE_DIR/* ~/Desktop/Kernel/current/system/lib/modules
+cp ../test/boot.img ~/Desktop/Kernel/current
 
 
