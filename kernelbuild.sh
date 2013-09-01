@@ -3,7 +3,7 @@
 # Set up kernel build environment
 export ARCH=arm
 export SUBARCH=arm
-export CROSS_COMPILE=../toolchain/linaro-gcc/arm-cortex_a8-linux-gnueabi-linaro_4.7.4-2013.06/bin/arm-gnueabi-
+export CROSS_COMPILE=/home/doadin/Desktop/kernel/toolchains/toolchains-2013.08/arm-cortex_a8-linux-gnueabi-linaro_4.7.4-2013.08/bin/arm-gnueabi-
 
 # Clean the previous build and start rebuild later
 echo ""
